@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Обсерватория ЧувГУ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Обсерватория ЧувГУ</span>
+      </a>
+
+      <ul class="nav nav-pills">
+
+        <li class="nav-item"><a href="catalogue" class="nav-link active" aria-current="page">Каталог</a></li>
+        <li class="nav-item"><a href="about" class="nav-link">О нас</a></li>
+        <li class="nav-item"><a href="phone" class="nav-link">Контактная информация</a></li>
+
+      </ul>
+    </header>
+  </div>
+
+
+ <style>
+  .catalog-container {
+    display: flex;
+    justify-content: center;
+  }
+  .catalog-item {
+    width: 300px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .catalog-item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="catalog-container">
+  <div class="catalog-item">
+    <a href="https://alekstour.ru/img/arkhyz-abservyatoriya-aleks-tur-tur-vykhodnogo-dnya-zakaz-avtobusa.jpg" onclick="return loadContent(event, this)">
+      <img src="https://alekstour.ru/img/arkhyz-abservyatoriya-aleks-tur-tur-vykhodnogo-dnya-zakaz-avtobusa.jpg" alt="Image 1">
+    </a>
+    <h3>Экскурсия по обсерватории</h3>
+  </div>
+  <div class="catalog-item">
+    <a href="https://u7.uidownload.com/vector/105/538/vector-free-constellation-vector-ai-svg-thumbnail.jpg" onclick="return loadContent(event, this)">
+      <img src="https://u7.uidownload.com/vector/105/538/vector-free-constellation-vector-ai-svg-thumbnail.jpg" alt="Image 2">
+    </a>
+    <h3>Мастеркласс "По звездному небу"</h3>
+  </div>
+  <div class="catalog-item">
+    <a href="http://rasfokus.ru/images/photos/small/7d16001aea8a113ef9de48d7a526632c.jpg" onclick="return loadContent(event, this)">
+      <img src="http://rasfokus.ru/images/photos/small/7d16001aea8a113ef9de48d7a526632c.jpg" alt="Image 3">
+    </a>
+    <h3>Эксркусия по музею обсерватории</h3>
+  </div>
+  <div class="catalog-item">
+    <a href="https://i.ytimg.com/vi/9pK8-FSQ400/mqdefault.jpg" onclick="return loadContent(event, this)">
+      <img src="https://i.ytimg.com/vi/9pK8-FSQ400/mqdefault.jpg" alt="Image 4">
+    </a>
+    <h3>Научный фильм "Начало.Земля"</h3>
+  </div>
+  <div class="catalog-item">
+    <a href="https://cs6.pikabu.ru/avatars/400/v400313.jpg?815170474" onclick="return loadContent(event, this)">
+      <img src="https://cs6.pikabu.ru/avatars/400/v400313.jpg?815170474" alt="Image 5">
+    </a>
+    <h3>Научный фильм "Начало.Большой взрыв"</h3>
+  </div>
+
+</div>
+
+<script>
+  function loadContent(event, link) {
+    event.preventDefault();
+    var imageSrc = link.getAttribute("href");
+    var imageAlt = link.querySelector("img").getAttribute("alt");
+    var catalogItem = link.closest(".catalog-item");
+    var imageElement = catalogItem.querySelector("img");
+    imageElement.src = imageSrc;
+    imageElement.alt = imageAlt;
+    return false;
+  }
+</script>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2023 ЧГУ им. И.Н. Ульянова. </p>
+  </footer>
+</main>
+</body>
+</html>

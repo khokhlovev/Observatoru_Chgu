@@ -1,0 +1,7 @@
+.catalog-item img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%; /* Добавлено: стилизация рамки изображения */
+  object-fit: cover; /* Добавлено: контроль масштабирования изображения */
+}
